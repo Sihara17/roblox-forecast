@@ -90,7 +90,7 @@ def _rank_slopes(snapshots):
         origin = points[-1][0]
         xs = [t - origin for t, _ in points]
         ys = [rank for _, rank in points]
-        weights = [math.exp(x / 36.0) for x in xs]
+        weights = [math.exp(x / 42.0) for x in xs]
         weight_sum = sum(weights)
         mean_x = sum(w * x for w, x in zip(weights, xs)) / weight_sum
         mean_y = sum(w * y for w, y in zip(weights, ys)) / weight_sum
